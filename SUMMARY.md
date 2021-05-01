@@ -3,4 +3,5 @@
 * [Authorization](README.md)
 * [Intents](intents.md)
 * [Responses](responses.md)
+* [Requests](requests.md)
 
