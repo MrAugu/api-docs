@@ -12,3 +12,11 @@ You’ve found the MrAugu API's documentation! These pages are dedicated to show
 
 If you believe you're experiencing a bug with our API or want to report incorrect documentation, open an issue on our [issue tracker](https://github.com/MrAugu/api-docs/issues).
 
+## Still need some help?
+
+ Join the [official developer server](https://discord.gg/rk7cVyk) for support and discussion regarding the API.
+
+## The limit is the sky.
+
+We love our developers, and we plan to keep making practical tools so that you can keep making cool stuff. We can’t wait to see what you make.
+
