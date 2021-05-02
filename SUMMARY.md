@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Privacy Policy](privacy-policy.md)
-* [Terms of Use](terms-of-use.md)
 
 ## BASICS
 
@@ -10,4 +8,9 @@
 * [Token Flags](basics/intents.md)
 * [Responses](basics/responses.md)
 * [Requests](basics/requests.md)
+
+## LEGAL
+
+* [Privacy Policy](legal/privacy-policy.md)
+* [Terms of Use](legal/terms-of-use.md)
 
