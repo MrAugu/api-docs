@@ -25,11 +25,11 @@ The interface request authorization header, as described in the authorization sp
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="firstSentence " type="string" required=true %}
-The second sentence, can have a maximum length of 3000 characters.
+The second sentence, can have a maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="secondSentence" type="string" required=true %}
-The first sentence, can have a maximum length of 3000 characters.
+The first sentence, can have a maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -55,13 +55,13 @@ Any 200: OK status codes mean that the request went through and was fulfilled su
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Any 400 bad request status codes will indicate a malformed request body, these can be caused by missing required parameters, parameters of wrong types, or invalid length of contents exceeding the allowed limit.
+Indicates a malformed request body, these can be caused by missing required parameters, parameters of wrong types, or invalid length - usually too large.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
   "statusCode": 400,
-  "error": "Bad Request",
+  "error": "Bad request",
   "message": "Invalid content length."
 }
 ```
@@ -69,7 +69,7 @@ Any 400 bad request status codes will indicate a malformed request body, these c
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-Any 401 unauthorized response status code means that you did not properly pass in the token in the authorization header, the token is invalid, or the token was regenerated and is also no longer valid.
+This status code indicates that you did not properly pass the token in the authorization header, the token is invalid \(it does not exist/was regenerated\).
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -97,7 +97,7 @@ Semantic Text Similarity Against
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of an array of phrases against a specific phrase.
+Checks the similarity of an array of different phrases against a specific phrase.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -110,11 +110,11 @@ The interface request authorization header, as described in the authorization sp
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="secondarySentences" type="array" required=true %}
-An array of strings containing the sentences that will be checked against the primary.
+An array of sentences that will be checked against the primary, maximum 100, each must be within the length of 1-3,000, and cumulated they should not exceed 50,000 characters.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="primarySentence " type="string" required=true %}
-The text other sentences will be checked against, maximum length of 3000 characters.
+The text other sentences will be checked against, maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -122,7 +122,7 @@ The text other sentences will be checked against, maximum length of 3000 charact
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Any 200: OK mean that the request went through and was fulfilled successfully by the server.
+Indicated that the request went through and was fulfilled successfully by the server.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -131,8 +131,51 @@ Any 200: OK mean that the request went through and was fulfilled successfully by
   "error": null,
   "message": "Request fulfilled.",
   "data": {
-    
+    "primary": "hello dear fiend",
+    "similarities": [
+      {
+        "sentence": "hello my cousin",
+        "similarity": 70.94
+      },
+      {
+        "sentence": "i love you",
+        "similarity": 47.24
+      },
+      {
+        "sentence": "we are having breakfast",
+        "similarity": 32.57
+      }
+    ],
+    "took": 60
   }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Indicates a malformed request body, these can be caused by missing required parameters, parameters of wrong types or invalid parameter length - usually too large.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 400,
+  "error": "Bad request",
+  "message": "The request body is invalid."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+This status code indicates that you did not properly pass the token in the authorization header, or the token is invalid \(it does not exist/was regenerated\).
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "You are not authorized."
 }
 ```
 {% endapi-method-response-example %}
