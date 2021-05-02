@@ -6,15 +6,15 @@ description: Details about API ratelimits.
 
 ## Ratelimiting Specification
 
-In order to maintain our service viable and secure, we impose very strict rate limiting rules for our users. The reset timeframe for the ratelimits is `60 seconds` or `1 minute`, by default all of the users have a default cap of `48 requests` per timeframe, after exceeding this quota - all of the requests to the API will be declined with a [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) error response.
+In order to maintain our service always online and secure for everybody - we impose very strict rate limiting rules for our users. The reset timeframe for the ratelimits is `60 seconds` and by default all of the users have a default cap of `48 requests` they can send in the span of a timeframe. After exceeding this quota all of the requests to the API will be declined with a [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) error response.
 
 {% hint style="danger" %}
-Is important to note that we have implemented security precaution that also limits the amount of [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) errors you can receive - after `50 requests` that resulted in a 429 http status code you will be automatically banned for an undisclosed amount of time, further requests failing in a [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) response code until the ban expires. 
+Is important to note that the amount of [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) errors you can receive is limited - after `50 requests` that resulted in a 429 HTTP status code you will be automatically banned temporary, while banned any requests will be declined by server with the [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) response code until the ban expires. 
 {% endhint %}
 
 ## Ratelimiting headers used
 
-We use the following conventions to let the clients know how close they are to hitting the ratelimit or how much time they have left before the ratelimit is reset.
+We use a series of _standard_ request headers to let the clients know how close they are to hitting the ratelimit or how much time they have left before the ratelimit gets .
 
 | Header Name | Value Type | Description |
 | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ We use the following conventions to let the clients know how close they are to h
 While the API is in not published as a stable version, these specifications are subject to change. The minimal changes that will occur are the seconds being changed to milliseconds for more precision. 
 {% endhint %}
 
-## Counting the request cap & raising it
+## Calculating the request quota & raising it
 
 To count the amount of requests any given user can make in the timeframe before hitting any ratelimit we use the following formula:
 

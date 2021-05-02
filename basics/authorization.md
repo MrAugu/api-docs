@@ -16,15 +16,13 @@ The API access tokens can be obtained from the [Help Tavern Discord Server](http
 
 ![Generating an API token](../.gitbook/assets/image%20%286%29%20%283%29.png)
 
-In order to view your access token, use the `$token view` command, and you will receive a direct message from the bot like the one below, containing the API key.
+In order to view your access token, use the `$token view` command, and you will receive a direct message from the bot like the one which you can see below.
 
 ![Viewing an API token in the DMs](../.gitbook/assets/image%20%287%29%20%282%29.png)
 
-However, for security and safety reasons you have only **30 seconds** to grab your access token in the direct messages before the token gets blurred out. And if your token ever gets compromised, you can reset it anytime with the `$token regenerate` command.
+However, for security and safety reasons you have only **30 seconds** to grab your access token in the direct messages before the token gets blurred out - so tokens don't pile up and it wouldn't get that easily compromised if something happened to your account. If your token ever gets compromised, you must reset it with the `$token regenerate`.
 
 {% hint style="info" %}
-If it isn't obvious by now, the token in the image has been regenerated and is no longer valid to use.
+If it isn't obvious by now, the token in the image has been regenerated and is no longer valid to use, so don't even try.
 {% endhint %}
-
-
 
