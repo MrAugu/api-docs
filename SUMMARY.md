@@ -19,3 +19,7 @@
 * [Privacy Policy](legal/privacy-policy.md)
 * [Terms of Use](legal/terms-of-use.md)
 
+---
+
+* [String Similarity](string-similarity.md)
+

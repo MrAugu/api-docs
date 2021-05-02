@@ -86,18 +86,13 @@ This status code indicates that you did not properly pass the token in the autho
 
 **It returns a data object of type `SingleTextSimilarity`.** 
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| similarity | Float32 | How similar they are on a scale from 1 to 100 \(%\), truncated to 2 decimal points. |
-| took | Integer | How much time the evaluation of these string took, in milliseconds. |
-
 {% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity/against" %}
 {% api-method-summary %}
 Semantic Text Similarity Against
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of an array of different phrases against a specific phrase.
+Checks the similarity of an array of different phrases against a specific phrase and returns the % of how semantically similar they are, using machine learning.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -146,7 +141,7 @@ Indicated that the request went through and was fulfilled successfully by the se
         "similarity": 32.57
       }
     ],
-    "took": 60
+    "took": 63
   }
 }
 ```
@@ -183,5 +178,35 @@ This status code indicates that you did not properly pass the token in the autho
 {% endapi-method-spec %}
 {% endapi-method %}
 
+Returns a data object of type `MultipleTextSimilarity`.
 
+## Data Structures
+
+> `SingleTextSimilarity`:
+
+> _Represents a text similarity against response data object returned by the API._
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `similarity` | `Float32` | The degree of similarity between the two sentences. \(`%`\) |
+| `took` | `Integer` | The amount of time taken by the evaluation. |
+
+> `MultipleTextSimilarity`:
+
+> _Represents a text similarity against response data object returned by the API._
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `primary` | `String` | The primary sentence that was passed in the request. |
+| `similarities` | `Array[Sentence]` | An array of evaluated sentence objects. |
+| `took` | `Integer` | The amount of time taken by the evaluation. |
+
+> `Sentence`:
+
+> _Represents an evaluated secondary sentence returned by the API._
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `sentence` | `String` | A secondary sentence passed in by the user. |
+| `similarity` | `Float32` | The degree of similarity between this secondary and the primary. \(`%`\) |
 
