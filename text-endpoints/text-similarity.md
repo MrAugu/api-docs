@@ -80,6 +80,20 @@ This status code indicates that you did not properly pass the token in the autho
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+Indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the ratelimit ban threshold in which case you must wait a period before sending requests again.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 403,
+  "error": "Forbidden",
+  "message": "You do not have the user flag required to access this endpoint, please refer to https://docs.mraugu.xyz/basics/intents for more information."   
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
