@@ -1,10 +1,10 @@
 ---
-description: How to authenticate yourself in order to use the API.
+description: Properly authenticating the requests.
 ---
 
 # Authorization
 
-The authorization to the application programing interface is done via a bearer token that is passed in as a header of **every request** that is being sent to the API. Here is an example of a valid authorization header.
+The authorization to the application programing interface is done via a bearer token that is passed in as a header of **every request** that is being sent to the API. Here is an example of a valid authorization header used to access the API.
 
 ```text
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MzY3MzAyNTkzNzUzNjQ1MDU3OjE2MTk3ODIzMDA2NjQ.SODrMYULKU9tb8RTzRQpzIzh5UEXaH2v1pZiEbal7i8     

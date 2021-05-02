@@ -1,5 +1,5 @@
 ---
-description: Standard response bodies for the API.
+description: The standard convention for API response payloads.
 ---
 
 # Responses

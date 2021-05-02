@@ -1,5 +1,5 @@
 ---
-description: The way to format valid requests that can be consumed by the API.
+description: Valid data formats that can be consumed by the API.
 ---
 
 # Requests
