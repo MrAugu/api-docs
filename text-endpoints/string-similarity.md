@@ -106,7 +106,7 @@ Indicates that you did not properly pass the token in the authorization header, 
 
 ## Data Structures
 
-> `StringSimilarity`:
+> **`StringSimilarity`**:
 
 > Represents the data returned from best-match text endpoint.
 
@@ -116,13 +116,24 @@ Indicates that you did not properly pass the token in the authorization header, 
 | `otherChoices` | `Array[Choice]` | Represents an evaluated choice returned by the API. |
 | `took` | `Integer` | The time taken to do the similarity evaluation. |
 
-> `BestChoice`:
+> **`BestChoice`**:
 
-> Represents a choice that is considered the best by the API.
+> Represents the best choice returned by the API.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `content` | `String` | Best choice's string content passed in by the user. |
 | `confidence` | `Float32` | The score obtained by the API after comparing it against the query. |
 | `index` | `Integer` | The zero-based index . |
+
+> **`Choice`**:
+
+> Represents an evaluated choice returned by the API.
+
+| Property | Type |  |
+| :--- | :--- | :--- |
+| `content` | `String` | Best choice content, as inputted by the user. |
+| `confidence` | `Float32` | The score obtained by the API after comparing it against the query. |
+
+
 

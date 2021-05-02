@@ -182,7 +182,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 ## Data Structures
 
-> `SingleTextSimilarity`:
+> **`SingleTextSimilarity`**:
 
 > _Represents a text similarity against response data object returned by the API._
 
@@ -191,7 +191,7 @@ This status code indicates that you did not properly pass the token in the autho
 | `similarity` | `Float32` | The degree of similarity between the two sentences. \(`%`\) |
 | `took` | `Integer` | The amount of time taken by the evaluation. |
 
-> `MultipleTextSimilarity`:
+> **`MultipleTextSimilarity`**:
 
 > _Represents a text similarity against response data object returned by the API._
 
@@ -201,7 +201,7 @@ This status code indicates that you did not properly pass the token in the autho
 | `similarities` | `Array[Sentence]` | An array of evaluated sentence objects. |
 | `took` | `Integer` | The amount of time taken by the evaluation. |
 
-> `Sentence`:
+> **`Sentence`**:
 
 > _Represents an evaluated secondary sentence returned by the API._
 
