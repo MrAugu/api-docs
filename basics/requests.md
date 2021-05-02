@@ -4,6 +4,18 @@ description: Valid data formats that can be consumed by the API.
 
 # Requests
 
+## The Base Url
+
+The API has a base URL to which endpoints path are attached in order to make requests, the base URL we are using for the API is the following:
+
+```text
+https://api.mraugu.xyz/
+```
+
+{% hint style="success" %}
+We impose strict HTTPS connections on all of our servers.
+{% endhint %}
+
 ## 1. JSON Encoded Data
 
 Most of the API endpoints consume JSON encoded data objects with properties that vastly vary between the API endpoints. Example of a valid JSON object:

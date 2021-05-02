@@ -10,6 +10,10 @@
 * [Requests](basics/requests.md)
 * [Ratelimits](basics/ratelimits.md)
 
+## TEXT ENDPOINTS
+
+* [Text Similarity](text-endpoints/text-similarity.md)
+
 ## LEGAL
 
 * [Privacy Policy](legal/privacy-policy.md)
