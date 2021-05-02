@@ -4,13 +4,17 @@ description: The two endpoints that handle text similarity related functionality
 
 # Text Similarity
 
+{% hint style="danger" %}
+This endpoint requires `TEXT_SIMIARITY` token privileged flag to be active, as described in the [User Flags](https://docs.mraugu.xyz/basics/intents) specification.
+{% endhint %}
+
 {% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity" %}
 {% api-method-summary %}
 Semantic Text Similarity 
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of 2 phrases against one another and returns how similar percent on a range from 0% to 100% with 2 decimals.
+Checks the similarity of 2 phrases against one another and returns the % of how semantically similar they are using machine learning.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -81,4 +85,11 @@ Any 401 unauthorized response means that you did not properly pass in the token 
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+**It returns a data object of type `SingleTextSimilarity`.** 
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| similarity | Float32 | How similar they are on a scale from 1 to 100 \(%\), truncated to 2 decimal points. |
+| took | Integer | How much time the evaluation of these string took, in milliseconds. |
 
