@@ -37,7 +37,7 @@ The first sentence, can have a maximum length of 3,000 characters.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Any 200: OK status codes mean that the request went through and was fulfilled successfully.
+Indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -178,7 +178,7 @@ This status code indicates that you did not properly pass the token in the autho
 {% endapi-method-spec %}
 {% endapi-method %}
 
-Returns a data object of type `MultipleTextSimilarity`.
+**Returns a data object of type `MultipleTextSimilarity`.**
 
 ## Data Structures
 

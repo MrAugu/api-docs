@@ -13,13 +13,10 @@
 ## TEXT ENDPOINTS
 
 * [Text Similarity](text-endpoints/text-similarity.md)
+* [String Similarity](text-endpoints/string-similarity.md)
 
 ## LEGAL
 
 * [Privacy Policy](legal/privacy-policy.md)
 * [Terms of Use](legal/terms-of-use.md)
-
----
-
-* [String Similarity](string-similarity.md)
 
