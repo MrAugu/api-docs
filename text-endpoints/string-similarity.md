@@ -104,3 +104,25 @@ Indicates that you did not properly pass the token in the authorization header, 
 
 **Returns a data object of type `StringSimilarity`.**
 
+## Data Structures
+
+> `StringSimilarity`:
+
+> Represents the data returned from best-match text endpoint.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `bestChoice` | `BestChoice` | Represents the best choice returned by the API. |
+| `otherChoices` | `Array[Choice]` | Represents an evaluated choice returned by the API. |
+| `took` | `Integer` | The time taken to do the similarity evaluation. |
+
+> `BestChoice`:
+
+> Represents a choice that is considered the best by the API.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `content` | `String` | Best choice's string content passed in by the user. |
+| `confidence` | `Float32` | The score obtained by the API after comparing it against the query. |
+| `index` | `Integer` | The zero-based index . |
+
