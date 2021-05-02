@@ -12,7 +12,7 @@ Image NSFW Classifier
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Analyzes the image and how NSFW the API think the image is amongst a several other categories, using machine learning.
+Analyzes the image and how NSFW the API think the image is amongst a several other categories, using machine learning. \*Only supports PNG images, if your images have other formats, you must convert them before feeding them into the API.\*
 {% endapi-method-description %}
 
 {% api-method-spec %}
