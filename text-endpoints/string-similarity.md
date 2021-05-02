@@ -25,11 +25,11 @@ The API authorization header, as described in the authorization section.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="query" type="string" required=true %}
-The string that all the choices will be compared against, max length 3,000 chars.
+The string that all the choices will be compared against, max length 3,000 characters.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="choices" type="array" required=true %}
-An array of string that will be compared against the query, max 100 items, each max length 3,000, cumulated max length 50,000.
+An array of string that will be compared against the query, max 100 items, each max length 3,000 characters, and cumulated max length 50,000 characters.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

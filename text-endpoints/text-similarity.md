@@ -19,7 +19,7 @@ Checks the similarity of 2 phrases against one another and returns the % of how 
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The interface request authorization header, as described in the authorization spec.
+The API request authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -99,13 +99,13 @@ Checks the similarity of an array of different phrases against a specific phrase
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The interface request authorization header, as described in the authorization spec.
+The API request authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="secondarySentences" type="array" required=true %}
-An array of sentences that will be checked against the primary, maximum 100, each must be within the length of 1-3,000, and cumulated they should not exceed 50,000 characters.
+An array of sentences that will be checked against the primary, max 100 items, each max length 3,000 characters, and cumulated max length 50,000 characters.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="primarySentence " type="string" required=true %}
