@@ -38,8 +38,16 @@ The first sentence, can have a maximum length of 3000 characters.
 Any 200 requests means that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 200,
+  "error": null,
+  "message": "Request fulfilled.",
+  "data": {
+    "similarity": 88.93
+    "took": 15
+  }
+}
 ```
 {% endapi-method-response-example %}
 
@@ -48,11 +56,25 @@ Any 200 requests means that the request went through and was fulfilled successfu
 Any 400 bad requests will indicate a malformed request body, these can be caused by missing required parameters, parameters of wrong types, or invalid length of contents exceeding the allowed limit.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "statusCode": 400,
   "error": "Bad Request",
   "message": "Invalid content length."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+Any 401 unauthorized response means that you did not properly pass in the token in the authorization header, the token is invalid, or the token was regenerated and is also no longer valid.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "You are not authorized."
 }
 ```
 {% endapi-method-response-example %}
