@@ -1,7 +1,12 @@
 # Table of contents
 
-* [Authorization](README.md)
-* [Token Flags](intents.md)
-* [Responses](responses.md)
-* [Requests](requests.md)
+* [Introduction](README.md)
+* [Privacy Policy](privacy-policy.md)
+
+## PREFACE
+
+* [Authorization](preface/authorization.md)
+* [Token Flags](preface/intents.md)
+* [Responses](preface/responses.md)
+* [Requests](preface/requests.md)
 

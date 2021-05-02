@@ -1,28 +1,14 @@
 ---
-description: How to authenticate yourself in order to use the API.
+description: Welcome to MrAugu's API documentation.
 ---
 
-# Authorization
+# Introduction
 
-The authorization to the application programing interface is done via a bearer token that is passed in as a header of **every request** that is being sent to the API. Here is an example of a valid authorization header
+You’ve found the MrAugu API's documentation! These pages are dedicated to showing you all the ways that you can use the API to make cool stuff. Whether you’re looking to create awesome bot commands or provide your website with security the API has something for you.
 
-```text
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MzY3MzAyNTkzNzUzNjQ1MDU3OjE2MTk3ODIzMDA2NjQ.SODrMYULKU9tb8RTzRQpzIzh5UEXaH2v1pZiEbal7i8     
-```
+ All of our [documentation is on GitHub](https://github.com/MrAugu/api-docs) and we absolutely love corrections and improvements!
 
-## Obtaining The Token
+## Bugs
 
-The API tokens can be obtained from the [Help Tavern Discord Server](https://discord.gg/rk7cVyk)'s through the discord bot called _Tavern Guard_ by using the `$token generate` command in one of the channels designated for related bot commands.
-
-![Generating Token](.gitbook/assets/image%20%283%29.png)
-
-In order to view your token, use the `$token view` command, and you will receive a direct message from the bot like the one below, containing the API key.
-
-![Token In Direct Messages](.gitbook/assets/image%20%285%29.png)
-
-However, for security and safety reasons you have only **30 seconds** to grab your token in the direct messages before the token gets blurred out. And if your token ever gets compromised, you can reset it anytime with the `$token regenerate` command.
-
-{% hint style="info" %}
-If it isn't obvious by now, the token in the image has been regenerated and is no longer valid to use.
-{% endhint %}
+If you believe you're experiencing a bug with our API or want to report incorrect documentation, open an issue on our [issue tracker](https://github.com/MrAugu/api-docs/issues).
 
