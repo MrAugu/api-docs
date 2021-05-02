@@ -4,15 +4,15 @@ description: Valid data formats that can be consumed by the API.
 
 # Requests
 
-## The Base Url
+## Base URL
 
-The API has a base URL to which endpoints path are attached in order to make requests, the base URL we are using for the API is the following:
+The Base URL is the domain where the API server is being hosted, and it's the prefix for every endpoint address, this is a constant that changes only in exceptional situations. 
 
 ```text
 https://api.mraugu.xyz/
 ```
 
-{% hint style="success" %}
+{% hint style="info" %}
 We impose strict HTTPS connections on all of our servers.
 {% endhint %}
 
@@ -21,7 +21,6 @@ We impose strict HTTPS connections on all of our servers.
 Most of the API endpoints consume JSON encoded data objects with properties that vastly vary between the API endpoints. Example of a valid JSON object:
 
 ```javascript
-/* JSON Object Query Example */
 {
   "query": "I have issues with the car.",
   "choices": [
