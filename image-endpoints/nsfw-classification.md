@@ -25,7 +25,7 @@ The API authorization header, as described in the authorization section.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data" type="string" required=true %}
-The request body should be the image data, in the format described in the request section.
+The request body should be the image data, in the format described in the request section, the image size cannot be bigger than 5MB.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -51,6 +51,20 @@ Indicates that the request went through and was fulfilled successfully.
     },
     "took": 183
   }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types or invalid content length - usually too large.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 400,
+  "error": "Bad request",
+  "message": "Invalid request body."
 }
 ```
 {% endapi-method-response-example %}
