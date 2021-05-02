@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Authorization](README.md)
-* [Intents](intents.md)
+* [Token Flags](intents.md)
 * [Responses](responses.md)
 * [Requests](requests.md)
 
