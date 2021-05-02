@@ -16,6 +16,10 @@
 * [Text Similarity](text-endpoints/text-similarity.md)
 * [String Similarity](text-endpoints/string-similarity.md)
 
+## IMAGE ENDPOINTS
+
+* [NSFW Classification](image-endpoints/nsfw-classification.md)
+
 ## LEGAL
 
 * [Privacy Policy](legal/privacy-policy.md)
