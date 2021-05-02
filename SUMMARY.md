@@ -5,7 +5,7 @@
 ## BASICS
 
 * [Authorization](basics/authorization.md)
-* [Token Flags](basics/intents.md)
+* [User Flags](basics/intents.md)
 * [Responses](basics/responses.md)
 * [Requests](basics/requests.md)
 * [Ratelimits](basics/ratelimits.md)
