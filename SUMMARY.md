@@ -2,11 +2,12 @@
 
 * [Introduction](README.md)
 * [Privacy Policy](privacy-policy.md)
+* [Terms of Use](terms-of-use.md)
 
-## PREFACE
+## BASICS
 
-* [Authorization](preface/authorization.md)
-* [Token Flags](preface/intents.md)
-* [Responses](preface/responses.md)
-* [Requests](preface/requests.md)
+* [Authorization](basics/authorization.md)
+* [Token Flags](basics/intents.md)
+* [Responses](basics/responses.md)
+* [Requests](basics/requests.md)
 
