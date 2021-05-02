@@ -4,7 +4,7 @@ description: The two endpoints that handle text similarity related functionality
 
 # Text Similarity
 
-> These endpoints requires the privileged `TEXT_SIMIARITY` token flag to be active, as described in the [User Flags](https://docs.mraugu.xyz/basics/intents) specification.
+> These endpoints requires the privileged `TEXT_SIMILARITY` token flag to be active, as described in the [User Flags](https://docs.mraugu.xyz/basics/intents) specification.
 
 {% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity" %}
 {% api-method-summary %}
