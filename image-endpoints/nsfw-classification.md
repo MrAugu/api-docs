@@ -4,7 +4,7 @@ description: The one endpoint that handles Image NSFW Classification.
 
 # Nsfw Classification
 
-> These endpoints requires the privileged `IMAGES_NSFW` user permission flag to be active, as described in the [User Flags](../../basics/intents.md#what-are-user-flags) section. See information on how to activate privileged flags [here](../../basics/intents.md#activating-privileged-flags).
+> These endpoints requires the privileged `IMAGES_NSFW` user permission flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section. See information on how to activate privileged flags [here](../basics/intents.md#activating-privileged-flags).
 
 {% api-method method="post" host="https://api.mraugu.xyz" path="/images/classify/nsfw" %}
 {% api-method-summary %}

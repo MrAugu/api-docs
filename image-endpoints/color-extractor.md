@@ -4,3 +4,7 @@ description: The one endpoint that offers dominant color extraction functionalit
 
 # Color Extractor
 
+
+
+>
+

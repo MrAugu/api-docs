@@ -18,8 +18,8 @@
 
 ## IMAGE ENDPOINTS
 
-* [Nsfw Classification](image-endpoints/nsfw-classification/README.md)
-  * [Color Extractor](image-endpoints/nsfw-classification/color-extractor.md)
+* [Nsfw Classification](image-endpoints/nsfw-classification.md)
+* [Color Extractor](image-endpoints/color-extractor.md)
 
 ## LEGAL
 
