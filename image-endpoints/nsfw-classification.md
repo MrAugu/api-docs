@@ -18,6 +18,10 @@ Analyzes the image and how NSFW the API think the image is amongst a several oth
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
+{% api-method-parameter name="User-Agent" type="string" required=false %}
+The user agent associated with this request, can be used to drack different requesters in the metrics.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
 The API authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
@@ -137,7 +141,7 @@ sBbtZYPrxvbkmr/TBf3kG2JkBs+uz6zKxTrq8cc//nH8HgTKrg8y/O..(17KBs later)..VORK5CYII
 | :--- | :--- | :--- |
 | `neutral` | `Float32` | Represents how likely is for the image to be neural. |
 | `porn` | `Float32` | Represents how likely is for the image to be porn. |
-| `sexy` | `Floar32` | Represents how likely is for the image to be sexy. |
+| `sexy` | `Float32` | Represents how likely is for the image to be sexy. |
 | `hentai` | `Float32` | Represents how likely is for the image to be hentai. |
 | `drawing` | `Float32` | Represents how likely is for the image to be a drawing. |
 

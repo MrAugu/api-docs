@@ -18,6 +18,10 @@ Checks the similarity of 2 sentences, and returns the degree of similarity betwe
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
+{% api-method-parameter name="User-Agent" type="string" required=false %}
+The user agent associated with this request, can be used to track different requesters in the metrics. 
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
 The API request authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
@@ -112,6 +116,10 @@ Checks the similarity of an array of different phrases against a specific phrase
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
+{% api-method-parameter name="User-Agent" type="string" required=false %}
+The user agent associated with this request, can be used to track different requesters in the metrics.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
 The API request authorization header, as described in the authorization section.
 {% endapi-method-parameter %}

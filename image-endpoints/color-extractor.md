@@ -18,6 +18,10 @@ Extracts the most dominant colors of an image and returns them in a plethora of 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
+{% api-method-parameter name="User-Agent" type="string" required=false %}
+The user agent associated with the request, can be used to track different requesters in the metrics.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Authorization" type="string" required=true %}
 The authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
