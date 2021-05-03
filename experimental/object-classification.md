@@ -47,11 +47,46 @@ Image base64 encoded binary, as described in the request section. Maximum size i
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+This indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
+{
+  "statusCode": 200,
+  "error": null,
+  "message": "Request fulfilled.",
+  "data": {
 
+  }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant format for that endpoint, missing required parameters, parameters of wrong types or invalid parameter length - usually too large.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "statusCode": 400,
+  "error": "Bad request",
+  "message": "Invalid request body."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+This status code indicates that you did not properly pass the token in the authorization header, or the provided token is invalid.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+   "statusCode": 401,
+   "error": "Unauthorized",
+   "message": "You are not authorized."
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
