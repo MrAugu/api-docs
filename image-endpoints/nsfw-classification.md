@@ -12,7 +12,7 @@ Image NSFW Classifier
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Analyzes the image and how NSFW the API think the image is amongst a several other categories, using machine learning. \*Only supports PNG images, if your images have other formats, you must convert them before feeding them into the API.\*
+Analyzes the image and how NSFW the API think the image is amongst a several other categories, using machine learning. This endpoint only supports the png image format.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -25,7 +25,7 @@ The API authorization header, as described in the authorization section.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data" type="string" required=true %}
-The request body should be the image data, in the format described in the request section, the image size cannot be bigger than 5MB.
+Image base64 encoded binary, as described in the request section. Maximum size is 5MB.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
