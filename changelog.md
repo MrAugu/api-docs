@@ -6,8 +6,3 @@ description: >-
 
 # Changelog
 
-## 1.0.0 Beta - 2021-05-XX
-
-### Added
-
-* 
