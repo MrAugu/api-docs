@@ -17,10 +17,11 @@ User flags are a series of boolean values stored inside a flag bitfield stored i
 | `IMAGES` | `0x4` `(1 << 2)` | Default | Permission |
 | `IMAGES_NSFW` | `0x8` `(1 << 3)` | Granted | Permission |
 | `IMAGES_OBJECTS` | `0x10` `(1 << 4)` | Granted | Permission |
-| `eTEXT_EVALUATION` | `0x20` `(1 << 5)` | Granted | Permission |
+| `TEXT_TOXICITY` | `0x20` `(1 << 5)` | Granted | Permission |
 | `BANNED` | `0x40` `(1 << 6)` | Granted | State |
 | `INFORMATION` | `0x80` `(1 << 7)` | Default | Permission |
 | `EXPERIMENTAL` | `0x100` `(1 << 8)` | Granted | Permission |
+| `TEXT_QUALITY` | `0x200` `(1 << 9)` |  Granted | Permission |
 
 ## Activating privileged flags
 
