@@ -58,6 +58,8 @@ Image base64 encoded binary, as described in the request section. Maximum size i
 {% endapi-method-spec %}
 {% endapi-method %}
 
+**Returns a data object of type `ImageObjects`.**
+
 ## Data Structures
 
 
