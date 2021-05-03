@@ -18,7 +18,7 @@
 
 ## IMAGE ENDPOINTS
 
-* [NSFW Classification](image-endpoints/nsfw-classification.md)
+* [Nsfw Classification](image-endpoints/nsfw-classification.md)
 
 ## LEGAL
 

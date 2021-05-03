@@ -4,7 +4,7 @@ description: The one endpoint that handles string similarity related functionali
 
 # String Similarity
 
-> This endpoint requires the default `TEXT` token flag to be active, as described in the [User Flags](https://docs.mraugu.xyz/basics/intents) specification.
+> This endpoint requires the default `TEXT` user permission flag to be active, as described in the [User Flags](https://docs.mraugu.xyz/basics/intents) section.
 
 {% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity/best-match" %}
 {% api-method-summary %}
