@@ -4,7 +4,7 @@ description: The one endpoint that handles string similarity related functionali
 
 # String Similarity
 
-> c
+> This endpoint requires the default `TEXT` user permission flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section.
 
 {% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity/best-match" %}
 {% api-method-summary %}

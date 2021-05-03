@@ -21,6 +21,10 @@
 * [Nsfw Classification](image-endpoints/nsfw-classification.md)
 * [Color Extractor](image-endpoints/color-extractor.md)
 
+## EXPERIMENTAL
+
+* [Object Classification](experimental/object-classification.md)
+
 ## LEGAL
 
 * [Privacy Policy](legal/privacy-policy.md)
