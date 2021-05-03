@@ -31,14 +31,23 @@ Most of the API endpoints consume JSON encoded data objects with properties that
 }
 ```
 
-## 2. Data URL Encoded Data
+## 2. Binary Encoded Data
 
-It is used to send the API binary data such as images or gifs, while the API can consume Data URL encoded data, it **DOES NOT USE THE STANDARD FORMAT** used in browsers. Here is the format for Data URL encoded binaries:
+Some of the endpoints are required to consume binary files \(e.g. image endpoints\), the API accepts base64 encoded binary files as the body of the request. You can read more about base64 [here](https://developer.mozilla.org/en-US/docs/Glossary/Base64). Here is an example of a valid base64 encoded image in the request body:
 
-```markup
-data:<mediatype>;<data>
+```text
+iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAgAElEQVR4nNWdV68sR9WGq2fGGDDBgDE55
+yMyFEiSAgJI8EV3PI7/FOQEBfcGAQIkAAThEUQJhkwweScc/Le0/3pbfUz3+NF9+ynPyWfGkefccWMgNj
+Zc/Y5NiWNJnVXV9VatfJa1bXWhlbafe5zn3bVVVe1f//7320Yhtb3/fi64oor2na7bV3Xjd9Xq1Vbr9fj
+91yXVz7f+973bk95ylPaNddcM/525ZVXttPT0/H+3JfP6Se/5/q0/LbZbNp973vf8ZqTk5Px+z3ucY/d8
+/71r3+1pz3tae3hD394+9nPftZ+/etfj+PMczLmq6++ehxPWu7J/Ywv74wxz87Y8znPyWfGkefccccd43
+j+/ve/79bknve85zje/P+f//xn7C+v3J/+aHlm5pn/cm36/dvf/jZel9/8rLyzBvk99/Jf+mS8GUvGRMt
+v3J/5p99cD5y4nuvScl2uyX9Zx1tuuaV96lOfapsK/DQmxeIAWCaY31gkJg8SpGVAf/nLX0bg5XMWMgNj
+ggww/+c3JpyFSx+5Pu/5LwPPvbk2vwXIj33sY3dj+vrXv96+9rWvtYc85CHt2muvbQ996EPHa/OMe93rX
+uPz0w8IywICjCwGi+d5BPmZW/5LXwEWgMl1f/3rX3f3gGg8I88E2YIwbCTWzxuKjZT+83/G/s9//nOHAK
+wr9+T/tNz329/+drwnmy6/51mMIX1nHvn/d7/73QjPrO3nP//59sMf/rA94QlPmEcA73oGlAFmEbxruBY      
+sBbtZYPrxvbkmr/TBf3kG2JkBs+uz6zKxTrq8cc//nH8HgTKrg8y/O..(17KBs later)..VORK5CYII=
 ```
 
-* `<mediatype>` - Is a file's MIME type such as `image/png` or `image/jpeg`, you can learn more about [MIME types here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
-* `<data>` - Is a base64 encoded Uint8 array/binary.
+
 
