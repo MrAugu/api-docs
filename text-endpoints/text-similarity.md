@@ -12,7 +12,7 @@ Semantic Text Similarity
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of 2 phrases against one another and returns the % of how semantically similar they are, using machine learning.
+Checks the similarity of 2 sentences, and returns the degree of similarity between them, using machine learning.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -100,13 +100,13 @@ Indicates that you have either tried to access an endpoint you don't have the us
 
 **It returns a data object of type `SingleTextSimilarity`.** 
 
-{% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity/against" %}
+{% api-method method="post" host="https://api.mraugu.xyz" path="/text/similarity/bulk" %}
 {% api-method-summary %}
-Semantic Text Similarity Against
+Semantic Text Similarity Bulk
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of an array of different phrases against a specific phrase and returns the % of how semantically similar they are, using machine learning.
+Checks the similarity of an array of different phrases against a specific phrase and returns the degree of similarity between them, using machine learning.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -196,7 +196,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 ## Data Structures
 
-> **`SingleTextSimilarity`**:
+> ### **`SingleTextSimilarity`**:
 
 > _Represents a text similarity against response data object returned by the API._
 
@@ -205,7 +205,7 @@ This status code indicates that you did not properly pass the token in the autho
 | `similarity` | `Float32` | The degree of similarity between the two sentences. \(`%`\) |
 | `took` | `Integer` | The amount of time taken by the evaluation. |
 
-> **`MultipleTextSimilarity`**:
+> ### **`MultipleTextSimilarity`**:
 
 > _Represents a text similarity against response data object returned by the API._
 
@@ -215,7 +215,7 @@ This status code indicates that you did not properly pass the token in the autho
 | `similarities` | `Array[Sentence]` | An array of evaluated sentence objects. |
 | `took` | `Integer` | The amount of time taken by the evaluation. |
 
-> **`Sentence`**:
+> ### **`Sentence`**:
 
 > _Represents an evaluated secondary sentence returned by the API._
 
