@@ -56,7 +56,30 @@ This indicates that the request went through and was fulfilled successfully.
   "error": null,
   "message": "Request fulfilled.",
   "data": {
-
+    "objects" [
+      {
+        "name": "...",
+        "x": 256.34,
+        "y": 120.67,
+        "width": 47.23,
+        "height": 77.38
+      },
+      {
+        "name": "...",
+        "x": 349.49,
+        "y": 285.48,
+        "width": 84.63,
+        "height": 73.96
+      },
+      {
+        "name": "...",
+        "x": 284.29,
+        "y": 178.67,
+        "width": 61.66,
+        "height": 78.18
+      }
+    ],
+    "took": 134
   }
 }
 ```
@@ -89,9 +112,25 @@ This status code indicates that you did not properly pass the token in the autho
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+### Example request body:
+
+```text
+
+```
 
 **Returns a data object of type `ImageObjects`.**
 
