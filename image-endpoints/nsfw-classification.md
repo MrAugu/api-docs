@@ -100,7 +100,7 @@ Indicates that you have either tried to access an endpoint you don't have the us
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example of a request body:
+### Example request body:
 
 ```text
 iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAgAElEQVR4nNWdV68sR9WGq2fGGDDBgDE55
