@@ -223,7 +223,7 @@ This status code that you did not properly pass the token in the authorization h
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the user flag for,  you've hit the ratelimit bad threshold in which case you must wait before sending requests again or yo
+Indicates that you have either tried to access an endpoint you don't have the user flag for,  you've hit the ratelimit bad threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -237,4 +237,49 @@ Indicates that you have either tried to access an endpoint you don't have the us
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+**Returns a data object of `UserData`.**
+
+## Data Structures
+
+> ### `UserData`:
+
+> Represents a GitHub user fetch response data object returned by the API.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `exists` | `Boolean` | Whether or not the user exists or not. |
+| `user` | `?GitHubUser` | The fetched user GitHub profile public information. |
+
+> `GitHubUser`:
+
+> Represents an user's public profile details as returned by the GitHub User Fetch endpoint.
+
+| Property | Type | Description | Param |
+| :--- | :--- | :--- | :--- |
+| `id` | `Integer` | The user's GitHub id. | Default |
+| `name` | `String` | The user's name. | Default |
+| `username` | `String` | The user's username. | Default |
+| `avatar` | `String` | A link to the user's avatar. | Default |
+| `profileUrl` | `String` | The link that leads to the user's public profile. | Default |
+| `githubAdmin` | `Boolean` | Whether the user is a GitHub site admin. | Default |
+| `company` | `?String` | !! The user's company name.  | Default |
+| `link` | `?String` | The link linked on the user's profile. | Default |
+| `location` | `?String` | The location listed on the user's profile. | Default |
+| `email` | `?String` | The user's public email address listed on their profile. | Default |
+| `bio` | `?String` | The user's public biography listed on their profile. | Default |
+| `twitterUsername` | `?String` | The user's public twitter username listed on their profile. | Default |
+| `publicRepoCount` | `Integer` | The amount of public repositories owned by the user. | Default |
+| `publicGistCount` | `Integer` | The amount of public gists owner by the user. | Default |
+| `followersCount` | `Integer` | The amount of people following this user. | Default |
+| `followingCount` | `Integer` | The amount of people this user follows. | Default |
+|  |  |  |  |
+
+{% hint style="info" %}
+\(1\) Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+
+\(2\) The properties that have two exclamation marks before the description might not fit the illustrated type or description.
+{% endhint %}
+
+
 
