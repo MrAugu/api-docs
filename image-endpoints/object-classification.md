@@ -155,5 +155,25 @@ sBbtZYPrxvbkmr/TBf3kG2JkBs+uz6zKxTrq8cc//nH8HgTKrg8y/O..(17KBs later)..VORK5CYII
 
 ## Data Structures
 
+> ### `ImageObjects`:
 
+> Represents an image classification response returned by the API.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `objects` | `Array[Item]` | An array if items that are predicted to be in the supplied photo. |
+| `took` | `Integer` | The amount of time taken by the evaluation. |
+
+> ### `Item`:
+
+> Represents a classified item predicted to be inside an image.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `String` | The name of the item/object recognized. |
+| `x` | `Integer` | The x coordinate that represents the horizontal margin of the top right corner. |
+| `y` | `Integer` | The y coordinate that represents the vertical margin of the top right corner.  |
+| `width` | `Integer` | The width of the box the object is located inside the photo. |
+| `height` | `Integer` | The height of the box the object is located inside the photo. |
+| `score` | `Float32` | Indicates how likely this object is in the actual photo. \(`<60%` means that the object is unlikely to be in the actual photo. |
 
