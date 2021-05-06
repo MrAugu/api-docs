@@ -215,7 +215,7 @@ This status code that you did not properly pass the token in the authorization h
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-
+Indicates that you have either tried to access an endpoint you don't have the user flag for,  you've hit the ratelimit bad threshold in which case you must wait before sending requests again or yo
 {% endapi-method-response-example-description %}
 
 ```
