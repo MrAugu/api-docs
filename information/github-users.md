@@ -138,7 +138,7 @@ Indicates that the request went through and was successfully fulfilled.
           }
         }
       ],
-      "following": [
+      "followers": [
         {
           "name": "cwkhawand",
           "id": 22796675,
@@ -161,7 +161,7 @@ Indicates that the request went through and was successfully fulfilled.
           "githubAdmin": false
         }
       ],
-      "followers": [
+      "following": [
         {
           "name": "kyranet",
           "id": 24852502,
