@@ -22,6 +22,7 @@ User flags are a series of boolean values stored inside a flag bitfield stored i
 | `INFORMATION` | `0x80` `(1 << 7)` | Default | Permission |
 | `EXPERIMENTAL` | `0x100` `(1 << 8)` | Granted | Permission |
 | `TEXT_QUALITY` | `0x200` `(1 << 9)` |  Granted | Permission |
+| `INFORMATION_GITHUB` | `0x400` `(1 << 10)` | Granted | Permission |
 
 ## Activating privileged flags
 
