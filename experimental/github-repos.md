@@ -85,9 +85,9 @@ This indicates that the request went through and was fulfilled successfully.
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=302 %}
+{% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-
+Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types of invalid length - usually too large.
 {% endapi-method-response-example-description %}
 
 ```
@@ -95,9 +95,9 @@ This indicates that the request went through and was fulfilled successfully.
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
+{% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-
+This status code indicates that you did not properly pass the token in the authorization header, or the token is invalid \(it does not exist/was regenerated\).
 {% endapi-method-response-example-description %}
 
 ```
@@ -107,7 +107,7 @@ This indicates that the request went through and was fulfilled successfully.
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-
+Indicates that you have either tried to access an endpoint you don't have the permission user flag for, you've hit the ratelimit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
 ```
