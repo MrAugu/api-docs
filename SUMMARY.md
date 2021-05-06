@@ -22,9 +22,12 @@
 * [Color Extractor](image-endpoints/color-extractor.md)
 * [Object Classification](image-endpoints/object-classification.md)
 
+## INFORMATION
+
+* [GitHub Users](information/github-users.md)
+
 ## EXPERIMENTAL
 
-* [GitHub Users](experimental/github-users.md)
 * [GitHub Repos](experimental/github-repos.md)
 
 ## LEGAL
