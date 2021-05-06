@@ -317,7 +317,11 @@ Indicates that you have either tried to access an endpoint you don't have the us
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+| `name` | `String` | The name of the user or organization. |
+| `id` | `Integer` | The GitHub is for the user or organization . |
+| `avatar` | `String` | The link to user's or organization's avatar or icon. |
+| `url` | `String` | The URL that leads to the user's or organization public profile. |
+| `githubAdmin` | `Boolean` | Whether the user or organization is a GitHub site admin. |
 
 {% hint style="info" %}
 \(1\) Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
