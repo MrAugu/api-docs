@@ -96,7 +96,7 @@ Indicates that you have either tried to access an endpoint you don't have the us
 {
   "statusCode": 403,
   "error": "Forbidden",
-  "message": "You do not have the user flag required to access this endpoint, please refer to https://docs.mraugu.xyz/basics/intents for more information."   
+  "message": "You do not have the flag required to access this endpoint. Please refer to the documentation at https://docs.mraugu.xyz/ for more information."   
 }
 ```
 {% endapi-method-response-example %}

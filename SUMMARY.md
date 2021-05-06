@@ -18,12 +18,14 @@
 
 ## IMAGE ENDPOINTS
 
+* [Object Classification](image-endpoints/object-classification.md)
 * [Nsfw Classification](image-endpoints/nsfw-classification.md)
 * [Color Extractor](image-endpoints/color-extractor.md)
 
 ## EXPERIMENTAL
 
-* [Object Classification](experimental/object-classification.md)
+* [GitHub Users](experimental/github-users.md)
+* [GitHub Repos](experimental/github-repos.md)
 
 ## LEGAL
 

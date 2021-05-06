@@ -14,6 +14,8 @@ This endpoint is experimental and can only be accessed by the developers and oth
 The documentation on this page is subject to change at anytime.
 {% endhint %}
 
+
+
 > These endpoints requires the privileged `IMAGES_OBJECTS` user permission flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section. See information on how to activate privileged flags [here](../basics/intents.md#activating-privileged-flags).
 
 {% api-method method="post" host="https://api.mraugu.xyz" path="/images/classify/objects" %}
@@ -118,11 +120,15 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-
+Indicates that you have either trued to access an endpoint you don't have the user flag for, or you've hit the ratelimit ban threshold in  which case you must wait before sending requests again.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 403,
+  "error": "Forbidden",
+  "message": "You do not have the flag required to access this endpoint. Please refer to the documentation at https://docs.mraugu.xyz/ for more information."   
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
