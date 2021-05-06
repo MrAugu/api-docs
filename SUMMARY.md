@@ -18,9 +18,9 @@
 
 ## IMAGE ENDPOINTS
 
-* [Object Classification](image-endpoints/object-classification.md)
 * [Nsfw Classification](image-endpoints/nsfw-classification.md)
 * [Color Extractor](image-endpoints/color-extractor.md)
+* [Object Classification](image-endpoints/object-classification.md)
 
 ## EXPERIMENTAL
 
