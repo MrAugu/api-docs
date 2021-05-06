@@ -22,7 +22,7 @@ Image Object Classification
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Can recognize over 80 objects from the photo, returning what it found and where on the image it was found, giving you the ability to draw boxes on the images corresponding to the area the object was found in.
+Recognizes objects from the photo, returning what it found and where on the image it was found, giving you the ability to draw boxes on the images corresponding to the area the object was found in. This endpoint only supports the png image format.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -58,25 +58,28 @@ This indicates that the request went through and was fulfilled successfully.
   "data": {
     "objects" [
       {
-        "name": "...",
+        "name": "person",
         "x": 256.34,
         "y": 120.67,
         "width": 47.23,
-        "height": 77.38
+        "height": 77.38,
+        "score": 89.33
       },
       {
-        "name": "...",
+        "name": "person",
         "x": 349.49,
         "y": 285.48,
         "width": 84.63,
-        "height": 73.96
+        "height": 73.96,
+        "score": 94.56
       },
       {
-        "name": "...",
+        "name": "person",
         "x": 284.29,
         "y": 178.67,
         "width": 61.66,
-        "height": 78.18
+        "height": 78.18,
+        "score": 88.32
       }
     ],
     "took": 134

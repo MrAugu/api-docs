@@ -4,6 +4,10 @@ description: Details about API ratelimits.
 
 # Ratelimits
 
+{% hint style="info" %}
+This page is scheduled for a rewrite.
+{% endhint %}
+
 ## Ratelimiting Specification
 
 In order to maintain our service always online and secure for everybody - we impose very strict rate limiting rules for our users. The reset timeframe for the ratelimits is `60 seconds` and by default all of the users have a default cap of `48 requests` they can send in the span of a timeframe. After exceeding this quota all of the requests to the API will be declined with a [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) error response.
