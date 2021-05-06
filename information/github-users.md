@@ -204,16 +204,16 @@ This status code that you did not properly pass the token in the authorization h
 
 ```javascript
 {
-   "statusCode": 401,
-   "error": "Unauthorized",
-   "message": "You are not authorized."
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "You are not authorized."
 }
 ```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the user flag for,  you've hit the ratelimit bad threshold in which case you must wait before sending requests again or you have been banned from using the API.
+Indicates that you have either tried to access an endpoint you don't have the permission user flag for,  you've hit the ratelimit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
 ```javascript

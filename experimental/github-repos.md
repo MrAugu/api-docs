@@ -90,8 +90,12 @@ This indicates that the request went through and was fulfilled successfully.
 Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types of invalid length - usually too large.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 400,
+  "error": "Bad request",
+  "message": "Invalid request body."
+}
 ```
 {% endapi-method-response-example %}
 
@@ -100,8 +104,12 @@ Indicates a malformed request body, these can be caused by sending the data enco
 This status code indicates that you did not properly pass the token in the authorization header, or the token is invalid \(it does not exist/was regenerated\).
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "You are not authorized."
+}
 ```
 {% endapi-method-response-example %}
 
@@ -110,8 +118,12 @@ This status code indicates that you did not properly pass the token in the autho
 Indicates that you have either tried to access an endpoint you don't have the permission user flag for, you've hit the ratelimit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 403,
+  "error": "Forbidden",
+  "message": "You do not have the flag required to access this endpoint. Please refer to the documentation at https://docs.mraugu.xyz/ for more information."   
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
