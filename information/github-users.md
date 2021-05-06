@@ -314,9 +314,11 @@ Indicates that you have either tried to access an endpoint you don't have the us
 | `githubAdmin` | `Boolean` | Whether the user or organization is a GitHub site admin. |
 
 {% hint style="info" %}
-\(1\) Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+{% endhint %}
 
-\(2\) The properties that have two exclamation marks before the description might not fit the illustrated type or description.
+{% hint style="info" %}
+The properties that have two exclamation marks before the description might not fit the illustrated type or description.
 {% endhint %}
 
 
