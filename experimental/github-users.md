@@ -251,29 +251,73 @@ Indicates that you have either tried to access an endpoint you don't have the us
 | `exists` | `Boolean` | Whether or not the user exists or not. |
 | `user` | `?GitHubUser` | The fetched user GitHub profile public information. |
 
-> `GitHubUser`:
+> ### `GitHubUser`:
 
 > Represents an user's public profile details as returned by the GitHub User Fetch endpoint.
 
-| Property | Type | Description | Param |
-| :--- | :--- | :--- | :--- |
-| `id` | `Integer` | The user's GitHub id. | Default |
-| `name` | `String` | The user's name. | Default |
-| `username` | `String` | The user's username. | Default |
-| `avatar` | `String` | A link to the user's avatar. | Default |
-| `profileUrl` | `String` | The link that leads to the user's public profile. | Default |
-| `githubAdmin` | `Boolean` | Whether the user is a GitHub site admin. | Default |
-| `company` | `?String` | !! The user's company name.  | Default |
-| `link` | `?String` | The link linked on the user's profile. | Default |
-| `location` | `?String` | The location listed on the user's profile. | Default |
-| `email` | `?String` | The user's public email address listed on their profile. | Default |
-| `bio` | `?String` | The user's public biography listed on their profile. | Default |
-| `twitterUsername` | `?String` | The user's public twitter username listed on their profile. | Default |
-| `publicRepoCount` | `Integer` | The amount of public repositories owned by the user. | Default |
-| `publicGistCount` | `Integer` | The amount of public gists owner by the user. | Default |
-| `followersCount` | `Integer` | The amount of people following this user. | Default |
-| `followingCount` | `Integer` | The amount of people this user follows. | Default |
-|  |  |  |  |
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `Integer` | The user's GitHub id. |
+| `name` | `String` | The user's name. |
+| `username` | `String` | The user's username. |
+| `avatar` | `String` | A link to the user's avatar. |
+| `profileUrl` | `String` | The link that leads to the user's public profile. |
+| `githubAdmin` | `Boolean` | Whether the user is a GitHub site admin. |
+| `company` | `?String` | !! The user's company name.  |
+| `link` | `?String` | The link linked on the user's profile. |
+| `location` | `?String` | The location listed on the user's profile. |
+| `email` | `?String` | The user's public email address listed on their profile. |
+| `bio` | `?String` | The user's public biography listed on their profile. |
+| `twitterUsername` | `?String` | The user's public twitter username listed on their profile. |
+| `publicRepoCount` | `Integer` | The amount of public repositories owned by the user. |
+| `publicGistCount` | `Integer` | The amount of public gists owner by the user. |
+| `followersCount` | `Integer` | The amount of people following this user. |
+| `followingCount` | `Integer` | The amount of people this user follows. |
+| `createdAt` | `Date` | A date object string indicating when this user profile has been created. |
+| `updatedAt` | `Date` | A date object string indicating when this user profile was last updated. |
+| `organizations` | `Organization[]` | An array with partial organization objects. The array will always return empty if the query parameter orgs isn't set to true. |
+| `starred` | `PartialRepository[]` | An array of partial repository objects starred by the user. The array will always return empty if the query parameter starred isn't set to true. |
+| `following` | `PartialUser[]` | An array of partial user objects containing the users that user is following. The array will always return empty if the query parameter following isn't set to true. |
+| `followers` | `PartialUser[]` | An array of partial user objects containing the users following the user. The array will always return empty if the query parameter followers isn't set to true. |
+
+> ### `Organization`:
+
+> Represents a partial organization object.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `Integer` | Organization's GitHub id. |
+| `name` | `String` | Organization's name. |
+| `icon` | `String` | The link to the organization's GitHub avatar. |
+| `description` | `?String` | Organization's description. |
+| `nodeId` | `String` | GitHub's internal node id representing this organization. |
+
+> ### `PartialRepository`:
+
+> Represents a partial repository object.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `nodeId` | `String` | GitHub's internal node id representing this repository. |
+| `id` | `Integer` | Repository's GitHub id. |
+| `name` | `String` | The name of the repository. |
+| `fullName` | `String` | The full name of the repository \(in the Owner/Name format\). |
+| `url` | `String` | The link that leads to this GitHub repository. |
+| `description` | `String` | The repository's description. |
+| `language` | `?String` | The main programing language used in the repository. |
+| `stars` | `String` | The amount of GitHub stars or stargazers. |
+| `watching` | `Integer` | The amount of people watching this repository's activity. |
+| `forks` | `Integer` | The amount of repositories forked from this repository. |
+| `defaultBranch` | `String` | The name of the main branch selected for this repository. |
+| `owner` | `PartialUser` | The partial user object of the user/organization that owns the repository. |
+
+> `PartialUser`:
+
+> Represents a partial user or organization object.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+|  |  |  |
 
 {% hint style="info" %}
 \(1\) Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
