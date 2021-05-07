@@ -80,8 +80,188 @@ Whether to fetch the repository's labels.
 This indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+  "statusCode": 200,
+  "error": null,
+  "message": "Request fulfileld",
+  "data": {
+    "exists": true,
+    "repository": {
+      "id": 259904118,
+      "nodeId": "MDEwOlJlcG9zaXRvcnkyNTk5MDQxMTg=",
+      "fullName": "ModCord/message-parser",
+      "owner": {
+        "name": "ModCord",
+        "id": 64532228,
+        "avatar": "https://avatars.githubusercontent.com/u/64532228?v=4",
+        "url": "https://github.com/ModCord",
+        "githubAdmin": false,
+        "type": "Organization"
+      },
+      "url": "https://github.com/ModCord/message-parser",
+      "description": "A message parser for discord using regular expressions and string manipulation.",
+      "createdAt": "2020-04-29T11:15:34.000Z",
+      "lastUpdatedAt": "2021-04-11T13:38:57.000Z",
+      "lastPushedAt": "2021-04-11T13:38:55.000Z",
+      "size": 99,
+      "stargazerCount": 1,
+      "watcherCount": 1,
+      "language": "TypeScript",
+      "forkCount": 0,
+      "openIssuesCount": 0,
+      "archived": false,
+      "defaultBranch": "master",
+      "forks": [
+        {
+          "id": 361958684,
+          "nodeId": "MDEwOlJlcG9zaXRvcnkzNjE5NTg2ODQ=",
+          "owner": {
+            "name": "felicisimo0913",
+            "id": 33395332,
+            "nodeId": "MDQ6VXNlcjMzMzk1MzMy",
+            "avatar": "https://avatars.githubusercontent.com/u/33395332?v=4",
+            "url": "https://github.com/felicisimo0913",
+            "type": "User"
+          },
+          "url": "https://github.com/felicisimo0913/discord-xp",
+          "description": "A lightweight and easy to use economy framework for discord bots, uses MongoDB.",
+          "createdAt": "2021-04-27T02:42:35.000Z",
+          "lastUpdatedAt": "2021-04-27T02:42:36.000Z",
+          "lastPushedAt": "2021-04-21T08:28:50.000Z",
+          "size": 639,
+          "stargazerCount": 0,
+          "watcherCount": 0,
+          "forkCount": 0,
+          "openIssuesCount": 0,
+          "archived": false,
+          "defaultBranch": "master"
+        }
+      ],
+      "tags": [
+        {
+          "name": "v1.1.11",
+          "zipSource": "https://api.github.com/repos/MrAugu/discord-xp/zipball/refs/tags/v1.1.11",
+          "tarSource": "https://api.github.com/repos/MrAugu/discord-xp/tarball/refs/tags/v1.1.11",
+          "commitSha": "b4b0409f8ed28427b88bb393743b69e32962e6db",
+          "commitUrl": "https://api.github.com/repos/MrAugu/discord-xp/commits/b4b0409f8ed28427b88bb393743b69e32962e6db",
+          "nodeId": "MDM6UmVmMjExMzAwMDcxOnJlZnMvdGFncy92MS4xLjEx"
+        }
+      ],
+      "languages": [
+        {
+          "name": "TypeScript",
+          "amount": 100
+        }
+      ],
+      "stargazers": [
+        {
+          "name": "DieselGaming",
+          "id": 44411085,
+          "nodeId": "MDQ6VXNlcjQ0NDExMDg1",
+          "avatar": "https://avatars.githubusercontent.com/u/44411085?v=4",
+          "url": "https://github.com/DieselGaming",
+          "type": "User"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "MrAugu",
+          "id": 39545629,
+          "nodeId": "MDQ6VXNlcjM5NTQ1NjI5",
+          "avatar": "https://avatars.githubusercontent.com/u/39545629?v=4",
+          "url": "https://github.com/MrAugu",
+          "type": "User",
+          "contributions": 29
+        }
+      ],
+      "commits": [
+        {
+          "author": {
+            "name": "Myst82015",
+            "id": 34489470,
+            "nodeId": "MDQ6VXNlcjM0NDg5NDcw",
+            "avatar": "https://avatars.githubusercontent.com/u/34489470?v=4",
+            "url": "https://github.com/Myst82015",
+            "type": "User",
+            "email": "midnight-_-@outlook.com"
+          },
+          "nodeId": "MDY6Q29tbWl0MjExMzAwMDcxOmMyNzhlYWE5YWEzMzMyYWM0ODMxMTkwMGQwODRjZjI3Yzk5MWFkMzQ=",
+          "sha": "c278eaa9aa3332ac48311900d084cf27c991ad34",
+          "message": "Update README.md\n\nRemoved a typo",
+          "commentCount": 0
+        }
+      ],
+      "issues": [
+        {
+          "url": "https://github.com/MrAugu/discord-xp/issues/31",
+          "id": 849630108,
+          "nodeId": "MDU6SXNzdWU4NDk2MzAxMDg=",
+          "number": 31,
+          "title": "Accepting Suggestions",
+          "labels": [
+            {
+              "id": 1581595688,
+              "nodeId": "MDU6TGFiZWwxNTgxNTk1Njg4",
+              "url": "https://api.github.com/repos/MrAugu/discord-xp/labels/enhancement",
+              "name": "enhancement",
+              "color": "a2eeef",
+              "default": true,
+              "description": "New feature or request"
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "body": "Is there anything you would like to see added to `discord-xp` module? If yes, then state any suggestions in this issue.",
+          "assignees": [
+            {
+              "name": "MrAugu",
+              "id": 39545629,
+              "nodeId": "MDQ6VXNlcjM5NTQ1NjI5",
+              "avatar": "https://avatars.githubusercontent.com/u/39545629?v=4",
+              "url": "https://github.com/MrAugu",
+              "type": "User"
+            }
+          ]
+        }
+      ],
+      "pulls": [
+        {
+          "url": "https://github.com/MrAugu/discord-xp/pull/34",
+          "id": 856782285,
+          "nodeId": "MDExOlB1bGxSZXF1ZXN0NjE0MzA3NTYy",
+          "number": 34,
+          "title": "Discord Xp Version 2.0.0",
+          "labels": [
+            {
+              "id": 2911132935,
+              "nodeId": "MDU6TGFiZWwyOTExMTMyOTM1",
+              "url": "https://api.github.com/repos/MrAugu/discord-xp/labels/being%20worked%20on",
+              "name": "being worked on",
+              "color": "674DD4",
+              "default": false,
+              "description": ""
+            }
+          ],
+          "state": "open",
+          "locked": false,
+          "body": "The pull request tracking the progress to discord-xp version 2.",
+          "assignees": [
+            {
+              "name": "MrAugu",
+              "id": 39545629,
+              "nodeId": "MDQ6VXNlcjM5NTQ1NjI5",
+              "avatar": "https://avatars.githubusercontent.com/u/39545629?v=4",
+              "url": "https://github.com/MrAugu",
+              "type": "User"
+            }
+          ]
+        }
+      ],
+      "label": []
+    }
+  }
+}
 ```
 {% endapi-method-response-example %}
 
