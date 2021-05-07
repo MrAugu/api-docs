@@ -12,7 +12,7 @@ Fetch Repository Information
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Fetches a repository's information from the GitHub's REST API.
+Fetches a repository's information from GitHub's REST API.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -297,7 +297,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the permission user flag for, you've hit the ratelimit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
+This indicates that you have either tried to access an endpoint you don't have the permission user flag for, you've hit the rate limit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -342,21 +342,21 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `lastPushedAt` | `Date` | The date and time when the last commit was pushed to this repository. |
 | `size` | `Integer` | The size of the repository, in KB. \(?\) |
 | `stargazerCount` | `Integer` | The amount of GitHub stars/stargazers this repository has. |
-| `watcherCount` | `Integer` | The amount of people watching this repository's activity. |
-| `language` | `?String` | The name of the programing language most used in the repository. |
-| `forkCount` | `Integer` | The amount of repositories forked from this repository. |
+| `watcherCount` | `Integer` | The number of people watching this repository's activity. |
+| `language` | `?String` | The name of the programming language most used in the repository. |
+| `forkCount` | `Integer` | The number of repositories forked from this repository. |
 | `openIssuesCount` | `Integer` | The total amount of issues and pull requests open in this repository. |
-| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read only. |
+| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read-only. |
 | `defaultBranch` | `String` | The name of the repository's main branch. |
 | `forks` | `PartialRepository[]` | The list of repositories that have been forked from this repository. This will always be an empty array if the forks query parameter isn't set to true.   |
 | `tags` | `Release[]` | A list of releases of this repository. This will always be an empty array if the tags query parameter isn't set to true. |
-| `languages` | `ProgramingLang[]` | A list of programing languages used in this repository and their % of how much they represent of the total languages. This will always return an empty array if the languages query parameter isn't set to true. |
+| `languages` | `ProgramingLang[]` | A list of programming languages used in this repository and their % of how much they represent of the total languages. This will always return an empty array if the 'languages' query parameter isn't set to true. |
 | `stargazers` | `PartialUser[]` | A list of stargazers/people who have starred this repository. This will always return an empty array if the stargazers query parameter isn't set to true. |
-| `contributors` | `Contributor[]` |  A list of people who have contributed to this repository. This will always return an empty array if contributors query parameter isn't set to true. |
-| `commits` | `Commit[]` | A list of commits that have been pushed to this repository. This will always return empty if the commits query parameter isn't set to true. |
-| `issues` | `Issues[]` | A list of issues open in this repository. This will always return empty if the issues query parameter isn't set to true. |
-| `pulls` | `Issues[]` | A list  of pull requests open in this repository. This will always return empty if the issues query parameter isn't set to true. |
-| `labels` | `Labels[]` | A list of labels this repository has. This will always return empty if the labels query parameter isn't set to true. |
+| `contributors` | `Contributor[]` |  A list of people who have contributed to this repository. This will always return an empty array if 'contributors' query parameter isn't set to true. |
+| `commits` | `Commit[]` | A list of commits that have been pushed to this repository. This will always return empty if the 'commits' query parameter isn't set to true. |
+| `issues` | `Issues[]` | A list of issues open in this repository. This will always return empty if the 'issues' query parameter isn't set to true. |
+| `pulls` | `Issues[]` | A list of pull requests 'open' in this repository. This will always return empty if the 'issues' query parameter isn't set to true. |
+| `labels` | `Labels[]` | A list of labels this repository has. This will always return empty if the 'labels' query parameter isn't set to true. |
 
 > ### `PartialUser`:
 
@@ -367,9 +367,9 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `name` | `String` | The name of the user or organization. |
 | `id` | `Integer` | The GitHub id of the user or organization. |
 | `nodeId` | `String` | GitHub's internal node id for this user or organization. |
-| `avatar` | `String` | A link to user's or organization's GitHub avatar. |
-| `url` | `String` | A link to user's or organization's public GitHub page. |
-| `type` | `String` | The type of structure, can be 'User' or 'Organization'. |
+| `avatar` | `String` | A link to the user's or organization's GitHub avatar. |
+| `url` | `String` | A link to the user's or organization's public GitHub page. |
+| `type` | `String` | The type of structure can be 'User' or 'Organization'. |
 
 > ### `PartialRepository`:
 
@@ -387,10 +387,10 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `lastPushedAt` | `Date` | The date and time when the last commit was pushed to this repository. |
 | `size` | `Integer` | The size of the repository, in KB. \(?\) |
 | `stargazerCount` | `Integer` | The amount of GitHub stars/stargazers this repository has. |
-| `watcherCount` | `Integer` | The amount of people watching this repository's activity. |
-| `forkCount` | `Integer` | The amount of repositories forked from this repository. |
+| `watcherCount` | `Integer` | The number of people watching this repository's activity. |
+| `forkCount` | `Integer` | The number of repositories forked from this repository. |
 | `openIssuesCount` | `Integer` | The total amount of issues and pull requests open in this repository. |
-| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read only. |
+| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read-only. |
 | `defaultBranch` | `String` | The name of the repository's main branch. |
 
 > ### `Release`:
@@ -408,12 +408,12 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 
 > ### `ProgramingLang`:
 
-> Represents a programing language used.
+> Represents a programming language used.
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| `name` | `String` | The name of the programing language used. |
-| `amount` | `Float64` | The percent of this programing language used out of the total programing languages used. |
+| `name` | `String` | The name of the programming language used. |
+| `amount` | `Float64` | The percent of this programming language used out of the total programming languages used. |
 
 > ### `Contributor` extends `PartialUser`:
 
@@ -421,7 +421,7 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| `contributions` | `Integer` | The amount of commits or contributions this used made in this GitHub repository. |
+| `contributions` | `Integer` | The number of commits or contributions this used made in this GitHub repository. |
 
 > `Commit`:
 
@@ -432,7 +432,7 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `author` | `CommitAuthor` | The GitHub user that authored this commit. |
 | `nodeId` | `String` | The GitHub internal node id for this commit. |
 | `message` | `String` | The message that was specified by the user that pushed this request. |
-| `commentCount` | `Integer` | The amount of comments on this commit. |
+| `commentCount` | `Integer` | The number of comments on this commit. |
 
 > ### `CommitAuthor` extends `PartialUser`:
 
@@ -467,14 +467,14 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | :--- | :--- | :--- |
 | `id` | `Integer` | The GitHub id for this label. |
 | `nodeId` | `String` | GitHub's internal node id for this label. |
-| `url` | `String` | The URL leading to label's GitHub page. |
+| `url` | `String` | The URL leading to the label's GitHub page. |
 | `name` | `String` | The name of this label. |
 | `color` | `String` | The hex color for this label. |
 | `default` | `Boolean` | Whether this label was created by GitHub by default on the repository creation. |
 | `description` | `?String` | The description for this label. |
 
 {% hint style="info" %}
-Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and might be `null` or `undefined`.
 {% endhint %}
 
 {% hint style="info" %}
