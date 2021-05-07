@@ -4,6 +4,8 @@ description: The one endpoint with GitHub repository information retrieval funct
 
 # GitHub Repos
 
+
+
 {% hint style="warning" %}
 This endpoint is experimental, and required the `EXPERIMENTAL` privileged user flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section.
 {% endhint %}
@@ -258,7 +260,17 @@ This indicates that the request went through and was fulfilled successfully.
           ]
         }
       ],
-      "label": []
+      "label": [
+        {
+          "id": 1581595690,
+          "nodeId": "MDU6TGFiZWwxNTgxNTk1Njkw",
+          "url": "https://api.github.com/repos/MrAugu/discord-xp/labels/good%20first%20issue",
+          "name": "good first issue",
+          "color": "7057ff",
+          "default": true,
+          "description": "Good for newcomers"
+        }
+      ]
     }
   }
 }
