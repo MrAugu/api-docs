@@ -456,3 +456,10 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 
 > Represents an issue or pull request.
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `url` | `String` | The link that leads to the page of this issue. |
+| `id` | `Integer` | The GitHub id for this issue. |
+| `nodeId` | `String` | GitHub's internal node id for this issue. |
+|  |  |  |
+
