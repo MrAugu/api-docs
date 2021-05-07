@@ -25,10 +25,9 @@
 ## INFORMATION
 
 * [GitHub Users](information/github-users.md)
+* [GitHub Repositories](information/github-repos.md)
 
 ## EXPERIMENTAL
-
-* [GitHub Repos](experimental/github-repos.md)
 
 ## LEGAL
 
