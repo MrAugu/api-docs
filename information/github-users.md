@@ -19,7 +19,7 @@ Fetches a user's information from the GitHub REST API.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-The authorization header as described in the authorization section.
+The authorization header, as described in the authorization section.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -49,7 +49,7 @@ Whether to fetch the users that are following the fetched user.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Indicates that the request went through and was successfully fulfilled.
+This indicates that the request went through and was successfully fulfilled.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -185,7 +185,7 @@ Indicates that the request went through and was successfully fulfilled.
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types or invalid length - usually too large.
+Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types, or invalid length - usually too large.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -213,7 +213,7 @@ This status code that you did not properly pass the token in the authorization h
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the permission user flag for,  you've hit the ratelimit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
+This indicates that you have either tried to access an endpoint you don't have the permission user flag for,  you've hit the rate limit ban threshold in which case you must wait before sending requests again or you have been banned from using the API.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -239,7 +239,7 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `exists` | `Boolean` | Whether or not the user exists or not. |
-| `user` | `?GitHubUser` | The fetched user GitHub profile public information. |
+| `user` | `?GitHubUser` | The fetched information. |
 
 > ### `GitHubUser`:
 
@@ -254,21 +254,21 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `profileUrl` | `String` | The link that leads to the user's public profile. |
 | `githubAdmin` | `Boolean` | Whether the user is a GitHub site admin. |
 | `company` | `?String` | !! The user's company name.  |
-| `link` | `?String` | The link linked on the user's profile. |
+| `link` | `?String` | The link to the user's public profile. |
 | `location` | `?String` | The location listed on the user's profile. |
 | `email` | `?String` | The user's public email address listed on their profile. |
 | `bio` | `?String` | The user's public biography listed on their profile. |
-| `twitterUsername` | `?String` | The user's public twitter username listed on their profile. |
-| `publicRepoCount` | `Integer` | The amount of public repositories owned by the user. |
+| `twitterUsername` | `?String` | The user's public Twitter username listed on their profile. |
+| `publicRepoCount` | `Integer` | The number of public repositories owned by the user. |
 | `publicGistCount` | `Integer` | The amount of public gists owner by the user. |
-| `followersCount` | `Integer` | The amount of people following this user. |
+| `followersCount` | `Integer` | The number of people following this user. |
 | `followingCount` | `Integer` | The amount of people this user follows. |
 | `createdAt` | `Date` | A date object string indicating when this user profile has been created. |
 | `updatedAt` | `Date` | A date object string indicating when this user profile was last updated. |
-| `organizations` | `Organization[]` | An array with partial organization objects. The array will always return empty if the query parameter orgs isn't set to true. |
-| `starred` | `PartialRepository[]` | An array of partial repository objects starred by the user. The array will always return empty if the query parameter starred isn't set to true. |
-| `following` | `PartialUser[]` | An array of partial user objects containing the users that user is following. The array will always return empty if the query parameter following isn't set to true. |
-| `followers` | `PartialUser[]` | An array of partial user objects containing the users following the user. The array will always return empty if the query parameter followers isn't set to true. |
+| `organizations` | `Organization[]` | An array with partial organization objects. The array will always return empty if the query parameter 'orgs' isn't set to true. |
+| `starred` | `PartialRepository[]` | An array of partial repository objects starred by the user. The array will always return empty if the query parameter 'starred' isn't set to true. |
+| `following` | `PartialUser[]` | An array of partial user objects containing the users that the user is following. The array will always return empty if the query parameter 'following' isn't set to true. |
+| `followers` | `PartialUser[]` | An array of partial user objects containing the users following the user. The array will always return empty if the query parameter 'followers' is not set to true. |
 
 > ### `Organization`:
 
@@ -294,10 +294,10 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `fullName` | `String` | The full name of the repository \(in the Owner/Name format\). |
 | `url` | `String` | The link that leads to this GitHub repository. |
 | `description` | `String` | The repository's description. |
-| `language` | `?String` | The main programing language used in the repository. |
+| `language` | `?String` | The main programing language that is used in the repository. |
 | `stars` | `String` | The amount of GitHub stars or stargazers. |
-| `watching` | `Integer` | The amount of people watching this repository's activity. |
-| `forks` | `Integer` | The amount of repositories forked from this repository. |
+| `watching` | `Integer` | The number of people watching this repository's activity. |
+| `forks` | `Integer` | The number of repositories forked from this repository. |
 | `defaultBranch` | `String` | The name of the main branch selected for this repository. |
 | `owner` | `PartialUser` | The partial user object of the user/organization that owns the repository. |
 
@@ -308,13 +308,13 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `name` | `String` | The name of the user or organization. |
-| `id` | `Integer` | The GitHub is for the user or organization . |
-| `avatar` | `String` | The link to user's or organization's avatar or icon. |
-| `url` | `String` | The URL that leads to the user's or organization public profile. |
+| `id` | `Integer` | GitHub is for the user or organization. |
+| `avatar` | `String` | The link to the user's or organization's avatar or icon. |
+| `url` | `String` | The URL that leads to the user's or organization's public profile. |
 | `githubAdmin` | `Boolean` | Whether the user or organization is a GitHub site admin. |
 
 {% hint style="info" %}
-Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and might be `null` or `undefined`.
 {% endhint %}
 
 {% hint style="info" %}

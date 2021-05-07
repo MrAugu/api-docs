@@ -12,14 +12,14 @@ Image NSFW Classifier
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Analyzes the image and how NSFW the API think the image is amongst a several other categories, using machine learning. This endpoint only supports the png image format.
+The image is analyzed and a report containing several classes will be returned.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="User-Agent" type="string" required=false %}
-The user agent associated with this request, can be used to drack different requesters in the metrics.
+The user agent associated with this request can be used to track different requesters in the metrics.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
@@ -29,7 +29,7 @@ The API authorization header, as described in the authorization section.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data" type="string" required=true %}
-Image base64 encoded binary, as described in the request section. Maximum size is 5MB.
+Image base64 encoded binary, as described in the request section. The maximum size allowed is 5MB.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -37,7 +37,7 @@ Image base64 encoded binary, as described in the request section. Maximum size i
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Indicates that the request went through and was fulfilled successfully.
+This indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -61,7 +61,7 @@ Indicates that the request went through and was fulfilled successfully.
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types or invalid content length - usually too large.
+Indicates a malformed request body, these can be caused by sending the data encoded in a non-compliant data format for that endpoint, missing required parameters, parameters of wrong types, or invalid content length - usually too large.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -89,7 +89,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the user flag for, or you've hit the ratelimit ban threshold in which case you must wait before sending requests again.
+This indicates that you have either tried to access an endpoint you don't have the user flag for, or you've hit the rate limit ban threshold in which case you must wait before sending requests again.
 {% endapi-method-response-example-description %}
 
 ```javascript

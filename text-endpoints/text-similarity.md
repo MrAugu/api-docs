@@ -19,7 +19,7 @@ Checks the similarity of 2 sentences, and returns the degree of similarity betwe
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="User-Agent" type="string" required=false %}
-The user agent associated with this request, can be used to track different requesters in the metrics. 
+The user agent associated with this request can be used to track different requesters in the metrics. 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
@@ -29,11 +29,11 @@ The API request authorization header, as described in the authorization section.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="firstSentence " type="string" required=true %}
-The second sentence, can have a maximum length of 3,000 characters.
+The second sentence can have a maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="secondSentence" type="string" required=true %}
-The first sentence, can have a maximum length of 3,000 characters.
+The first sentence can have a maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -41,7 +41,7 @@ The first sentence, can have a maximum length of 3,000 characters.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Indicates that the request went through and was fulfilled successfully.
+This Indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -87,7 +87,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the ratelimit ban threshold in which case you must wait a period before sending requests again.
+This Indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the rate limit ban threshold in which case you must wait a period before sending requests again.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -117,7 +117,7 @@ Checks the similarity of an array of different phrases against a specific phrase
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="User-Agent" type="string" required=false %}
-The user agent associated with this request, can be used to track different requesters in the metrics.
+The user agent associated with this request can be used to track different requesters in the metrics.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
@@ -131,7 +131,7 @@ An array of sentences that will be checked against the primary, max 100 items, e
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="primarySentence " type="string" required=true %}
-The text other sentences will be checked against, maximum length of 3,000 characters.
+The text other sentences will be checked against. Has a maximum length of 3,000 characters.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -171,7 +171,7 @@ Indicated that the request went through and was fulfilled successfully by the se
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Indicates a malformed request body, these can be caused by missing required parameters, parameters of wrong types or invalid parameter length - usually too large.
+Indicates a malformed request body, these can be caused by missing required parameters, parameters of wrong types, or invalid parameter length - usually too large.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -199,7 +199,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the ratelimit ban in which case you must wait a period before sending requests again.
+This indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the rate limit ban in which case you must wait a period before sending requests again.
 {% endapi-method-response-example-description %}
 
 ```javascript

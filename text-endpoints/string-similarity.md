@@ -12,14 +12,14 @@ Text Syntax Best Match
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Checks the similarity of the given choices against a query, and returns everything back accordingly.
+Checks the similarity of the given choices against a query, and returns everything accordingly.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="User-Agent" type="string" required=false %}
-The user agent associated with this request, can be used to track different requesters in the metrics.
+The user agent associated with this request can be used to track different requesters in the metrics.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" type="string" required=true %}
@@ -41,7 +41,7 @@ An array of string that will be compared against the query, max 100 items, each 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Indicates that the request went through and was fulfilled successfully.
+This Indicates that the request went through and was fulfilled successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -118,7 +118,7 @@ Indicates that you did not properly pass the token in the authorization header, 
 | :--- | :--- | :--- |
 | `bestChoice` | `BestChoice` | Represents the best choice returned by the API. |
 | `otherChoices` | `Array[Choice]` | Represents an evaluated choice returned by the API. |
-| `took` | `Integer` | The time taken to do the similarity evaluation. |
+| `took` | `Integer` | The time that is taken to do the similarity evaluation. |
 
 > ### **`BestChoice`**:
 
@@ -127,8 +127,8 @@ Indicates that you did not properly pass the token in the authorization header, 
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `content` | `String` | Best choice's string content passed in by the user. |
-| `confidence` | `Float32` | The score obtained by the API after comparing it against the query. |
-| `index` | `Integer` | The zero-based index . |
+| `confidence` | `Float32` | The score was obtained by the API after comparing it against the query. |
+| `index` | `Integer` | The zero-based index. |
 
 > ### **`Choice`**:
 
@@ -138,6 +138,4 @@ Indicates that you did not properly pass the token in the authorization header, 
 | :--- | :--- | :--- |
 | `content` | `String` | Best choice content, as inputted by the user. |
 | `confidence` | `Float32` | The score obtained by the API after comparing it against the query. |
-
-
 
