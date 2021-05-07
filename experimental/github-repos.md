@@ -416,5 +416,28 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `commitUrl` | `String` | The URL leading to the commit's page. |
 | `nodeId` | `String` | GitHub's internal commit for this release. |
 
+> ### `ProgramingLang`:
 
+> Represents a programing language used.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `String` | The name of the programing language used. |
+| `amount` | `Float64` | The percent of this programing language used out of the total programing languages used. |
+
+> ### `Contributor` _extends `PartialUser`_
+
+> Represent a contributor, inherits all the properties from the `PartialUser` structure.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `contributions` | `Integer` | The amount of commits or contributions this used made in this GitHub repository. |
+
+> `Commit`:
+
+> Represents a GitHub commit.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `author` | `CommitAuthor` | The GitHub user that authored this commit. |
 
