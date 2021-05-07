@@ -361,6 +361,10 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `forks` | `PartialRepository[]` | The list of repositories that have been forked from this repository. This will always be an empty array if the forks query parameter isn't set to true.   |
 | `tags` | `Release[]` | A list of releases of this repository. This will always be an empty array if the tags query parameter isn't set to true. |
 | `languages` | `ProgramingLang[]` | A list of programing languages used in this repository and their % of how much they represent of the total languages. This will always return an empty array if the languages query parameter isn't set to true. |
-| `stargazers` | `PartialUser[]` | A list of stargazers/people who have starred this repository. This will always return an empty array if the  |
-| `contributors` | `Contributor[]` |  A list of people who have contributed to this repository. |
+| `stargazers` | `PartialUser[]` | A list of stargazers/people who have starred this repository. This will always return an empty array if the stargazers query parameter isn't set to true. |
+| `contributors` | `Contributor[]` |  A list of people who have contributed to this repository. This will always return an empty array if contributors query parameter isn't set to true. |
+| `commits` | `Commit[]` | A list of commits that have been pushed to this repository. This will always return empty if the commits query parameter isn't set to true. |
+| `issues` | `Issues[]` | A list of issues open in this repository. This will always return empty if the issues query parameter isn't set to true. |
+| `pulls` | `Issues[]` | A list  of pull requests open in this repository. This will always return empty if the issues query parameter isn't set to true. |
+| `labels` | `Labels[]` | A list of labels this repository has. This will always return empty if the labels query parameter isn't set to true. |
 
