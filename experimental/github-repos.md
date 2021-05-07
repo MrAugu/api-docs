@@ -368,3 +368,16 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `pulls` | `Issues[]` | A list  of pull requests open in this repository. This will always return empty if the issues query parameter isn't set to true. |
 | `labels` | `Labels[]` | A list of labels this repository has. This will always return empty if the labels query parameter isn't set to true. |
 
+> ### `PartialUser`:
+
+> Represents a GitHub user or organization object with partial public properties.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `String` | The name of the user or organization. |
+| `id` | `Integer` | The GitHub id of the user or organization. |
+| `nodeId` | `String` | GitHub's internal node id for this user or organization. |
+| `avatar` | `String` | A link to user's or organization's GitHub avatar. |
+| `url` | `String` | A link to user's or organization's public GitHub page. |
+| `type` | `String` | The type of structure, can be 'User' or 'Organization'. |
+
