@@ -322,3 +322,45 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 {% endapi-method-spec %}
 {% endapi-method %}
 
+**Returns a `RepositoryData` data object.**
+
+## Data Structures
+
+> ### `RepositoryData`:
+
+> Represents a structure returned by the GitHub Repo Information fetch API.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `exists` | `Boolean` | Whether or not the GitHub repository exists or not on GitHub. |
+| `repository` | `Repository` | The data for the repository. |
+
+> ### `Repository`
+
+> Represents a repository's GitHub public information.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `Integer` | A repository's GitHub ID. |
+| `nodeId` | `String` | The GitHub internal node id for the repository. |
+| `fullName` | `String` | The full name for the repository \(in the Owner/Name format\). |
+| `owner` | `PatialUser` | The user or organization owning this repository. |
+| `url` | `String` | The URL leading to the repository's public GitHub page. |
+| `description` | `String` | This repository's description. |
+| `createdAt` | `Date` | The date and time this repository was created at. |
+| `lastUpdatedAt` | `Date` | The date end time this repository was last updated at. |
+| `lastPushedAt` | `Date` | The date and time when the last commit was pushed to this repository. |
+| `size` | `Integer` | The size of the repository, in KB. \(?\) |
+| `stargazerCount` | `Integer` | The amount of GitHub stars/stargazers this repository has. |
+| `watcherCount` | `Integer` | The amount of people watching this repository's activity. |
+| `language` | `?String` | The name of the programing language most used in the repository. |
+| `forkCount` | `Integer` | The amount of repositories forked from this repository. |
+| `openIssuesCount` | `Integer` | The total amount of issues and pull requests open in this repository. |
+| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read only. |
+| `defaultBranch` | `String` | The name of the repository's main branch. |
+| `forks` | `PartialRepository[]` | The list of repositories that have been forked from this repository. This will always be an empty array if the forks query parameter isn't set to true.   |
+| `tags` | `Release[]` | A list of releases of this repository. This will always be an empty array if the tags query parameter isn't set to true. |
+| `languages` | `ProgramingLang[]` | A list of programing languages used in this repository and their % of how much they represent of the total languages. This will always return an empty array if the languages query parameter isn't set to true. |
+| `stargazers` | `PartialUser[]` | A list of stargazers/people who have starred this repository. This will always return an empty array if the  |
+| `contributors` | `Contributor[]` |  A list of people who have contributed to this repository. |
+
