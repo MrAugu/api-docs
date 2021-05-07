@@ -475,5 +475,11 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+| `id` | `Integer` | The GitHub id for this label. |
+| `nodeId` | `String` | GitHub's internal node id for this label. |
+| `url` | `String` | The URL leading to label's GitHub page. |
+| `name` | `String` | The name of this label. |
+| `color` | `String` | The hex color for this label. |
+| `default` | `Boolean` | Whether this label was created by GitHub by default on the repository creation. |
+| `description` | `?String` | The description for this label. |
 
