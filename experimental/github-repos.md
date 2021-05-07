@@ -425,7 +425,7 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `name` | `String` | The name of the programing language used. |
 | `amount` | `Float64` | The percent of this programing language used out of the total programing languages used. |
 
-> ### `Contributor` _extends `PartialUser`_
+> ### `Contributor` extends `PartialUser`:
 
 > Represent a contributor, inherits all the properties from the `PartialUser` structure.
 
@@ -440,4 +440,19 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `author` | `CommitAuthor` | The GitHub user that authored this commit. |
+| `nodeId` | `String` | The GitHub internal node id for this commit. |
+| `message` | `String` | The message that was specified by the user that pushed this request. |
+| `commentCount` | `Integer` | The amount of comments on this commit. |
+
+> ### `CommitAuthor` extends `PartialUser`:
+
+> An user that authored a commit.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `email` | `?String` | The email of the user that authored this commit. |
+
+> ### `Issue`:
+
+> Represents an issue or pull request.
 
