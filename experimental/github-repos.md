@@ -381,3 +381,40 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `url` | `String` | A link to user's or organization's public GitHub page. |
 | `type` | `String` | The type of structure, can be 'User' or 'Organization'. |
 
+> ### `PartialRepository`:
+
+> A repository object with partial properties.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `Integer` | A repository's GitHub ID. |
+| `nodeId` | `String` | The GitHub internal node id for the repository. |
+| `owner` | `PartialUser` | The user or organization owning this repository. |
+| `url` | `String` | The URL leading to the repository's public GitHub page. |
+| `description` | `String` | This repository's description. |
+| `createdAt` | `Date` | The date and time this repository was created at. |
+| `lastUpdatedAt` | `Date` | The date end time this repository was last updated at. |
+| `lastPushedAt` | `Date` | The date and time when the last commit was pushed to this repository. |
+| `size` | `Integer` | The size of the repository, in KB. \(?\) |
+| `stargazerCount` | `Integer` | The amount of GitHub stars/stargazers this repository has. |
+| `watcherCount` | `Integer` | The amount of people watching this repository's activity. |
+| `forkCount` | `Integer` | The amount of repositories forked from this repository. |
+| `openIssuesCount` | `Integer` | The total amount of issues and pull requests open in this repository. |
+| `archived` | `Boolean` | Whether this repository was archived by the owner and now is read only. |
+| `defaultBranch` | `String` | The name of the repository's main branch. |
+
+> ### `Release`:
+
+> Represents a GitHub release.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `String` | The name of the release. |
+| `zipSource` | `String` | The link to the zip release file download. |
+| `tarSource` | `String` | The link to the tar release file download. |
+| `commitSha` | `String` | The SHA-1 git signature for the commit.  |
+| `commitUrl` | `String` | The URL leading to the commit's page. |
+| `nodeId` | `String` | GitHub's internal commit for this release. |
+
+
+
