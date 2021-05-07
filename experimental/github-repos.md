@@ -461,5 +461,19 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `url` | `String` | The link that leads to the page of this issue. |
 | `id` | `Integer` | The GitHub id for this issue. |
 | `nodeId` | `String` | GitHub's internal node id for this issue. |
+| `number` | `Integer` | The unique issue number for this issue in this repository. |
+| `title` | `String` | The title of this issue or pull request. |
+| `labels` | `Label[]` | A list of labels assigned to this issue or pull request. |
+| `state` | `String` | The state of this issue, "open", "closed" or "merged". \(?\) |
+| `locked` | `Boolean` | Whether this issue is locked. |
+| `body` | `String` | The contents of this issue or pull request, in markdown syntax. |
+| `assignees` | `PartialUser[]` | A list of users or organizations assigned to this issue or pull request. |
+
+> ### `Label`:
+
+> Represents a GitHub label in a certain repository.
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
 |  |  |  |
 
