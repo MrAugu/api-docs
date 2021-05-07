@@ -87,7 +87,7 @@ This status code indicates that you did not properly pass the token in the autho
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-This Indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the rate limit ban threshold in which case you must wait a period before sending requests again.
+This indicates that you have either tried to access an endpoint you don't have the user permission flag for, or you've hit the rate limit ban threshold in which case you must wait a period before sending requests again.
 {% endapi-method-response-example-description %}
 
 ```javascript
