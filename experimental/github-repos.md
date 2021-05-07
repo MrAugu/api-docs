@@ -4,16 +4,6 @@ description: The one endpoint with GitHub repository information retrieval funct
 
 # GitHub Repos
 
-
-
-{% hint style="warning" %}
-This endpoint is experimental, and required the `EXPERIMENTAL` privileged user flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section.
-{% endhint %}
-
-{% hint style="danger" %}
-This endpoint is experimental and can only be accessed by the developers and other privileged people - and we do not recommend the usage of any experimental endpoints in production environments, this should be used as a reference to let library developers to prepare for this addition - or the developers for adding it in their staging versions of projects ready to go live when the endpoint is removed the `EXPERIMENTAL`flag.
-{% endhint %}
-
 > These endpoints requires the privileged `INFORMATION_GITHUB` user permission flag to be active, as described in the [User Flags](../basics/intents.md#what-are-user-flags) section. See information on how to activate privileged flags [here](../basics/intents.md#activating-privileged-flags).
 
 {% api-method method="get" host="https://api.mraugu.xyz" path="/information/github/repository" %}
@@ -482,4 +472,12 @@ Indicates that you have either tried to access an endpoint you don't have the pe
 | `color` | `String` | The hex color for this label. |
 | `default` | `Boolean` | Whether this label was created by GitHub by default on the repository creation. |
 | `description` | `?String` | The description for this label. |
+
+{% hint style="info" %}
+Properties that have a question mark before the type name \(such as `?GitHubUser`\) are not guaranteed to always return a value and may be `null` or `undefined`.
+{% endhint %}
+
+{% hint style="info" %}
+The properties that have two exclamation marks before the description might not fit the illustrated type or description.
+{% endhint %}
 
